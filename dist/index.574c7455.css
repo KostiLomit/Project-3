@@ -318,4 +318,44 @@ body {
 .item-meta .item_title {
   color: #535353;
 }
+
+.modal-inner {
+  z-index: 100;
+  background-color: #00000080;
+  width: 100%;
+  height: 100%;
+  transition: width 2s;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+}
+
+.modal-inner--show {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.modal-item {
+  color: #fff;
+  background-color: #1a191f;
+  flex-direction: column;
+  max-width: 600px;
+  padding: 16px;
+  display: flex;
+  box-shadow: 0 0 20px #00000080;
+}
+
+.modal-item .modal-image {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
 /*# sourceMappingURL=index.574c7455.css.map */

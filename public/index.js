@@ -44,7 +44,7 @@ function createCards(data) {
     const cardElement = 
     `
     <div class="product-item" data-product-id="${id}">
-                <div class="item_image"><a href="#" class="item_image"><img src="${productImage}" alt=" alt="${productName}"></a></div>
+                <div class="item_image"><a href="#" class="item_image"><img src="${productImage}"  alt="${productName}"></a></div>
                 <div class="item-meta">
                     <div class="item_discount">-${discount}%</div>
                     <div class="item_price">
@@ -60,26 +60,35 @@ function createCards(data) {
             </div>
 `
 cards.insertAdjacentHTML('beforeend', cardElement);
-    })
+const createdCard = cards.lastElementChild;
+createdCard.addEventListener("click", () => openModal(id, productImage, productName, originPrice, discount, salePrice));
+    });
 
 }
 
 //modal
 
+function openModal(id, productImage, productName, originPrice, discount, salePrice) {
+    modal.classList.add('modal-inner--show');
 modal.innerHTML =`
 <div class="modal-item" data-product-id="${id}">
-<div class="modal-image"><img src="${productImage}" alt="${productImage}"></div>
-<div class="modal-meta">
-    <h3 class="modal_title">${productName}</h3>
-    <div class="modal_price">
+    <div class="modal-image"><img src="${productImage}" alt="${productImage}"></div>
+    <div class="modal-meta">
+        <h3 class="modal_title">${productName}</h3>
+        <div class="modal_price">
         <span class="modal_origin-pice">€${originPrice}</span>
         <span class="modal-discount">${discount}%</span>
     </div>
     <span class="modal_sale-price">€${salePrice}</span>
     <div class="modal-buttons">
-        <button class="modal-addcart-buton">ADD TO CART</button>
-        <button class="modal-close-buton">CLOSE</button>
+        <button class="modal-addcart-button">ADD TO CART</button>
+        <button class="modal-close-button">CLOSE</button>
     </div>
 </div>
-</div>
-`
+`;
+const closeModal = document.querySelector('.modal-close-button');
+closeModal.addEventListener('click', () => {
+    modal.classList.remove('modal-inner--show');
+});
+
+}

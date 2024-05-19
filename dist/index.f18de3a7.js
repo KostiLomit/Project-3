@@ -608,24 +608,24 @@ function renderStartPage(data) {
     const arrCards = data.slice(0, (0, _constants.SHOW_CARDS_CLICK));
     createCards(arrCards);
 }
-function getRandomInt(discount1) {
-    return Math.floor(Math.random() * discount1);
+function getRandomInt(discount) {
+    return Math.floor(Math.random() * discount);
 }
 function createCards(data) {
     data.forEach((card)=>{
-        const { id: id1, sku, productName: productName1, originPrice: originPrice1, productImage: productImage1 } = card;
-        let discount1 = getRandomInt(100);
-        const salePrice1 = (originPrice1 - originPrice1 * discount1 / 100).toFixed(2);
+        const { id, sku, productName, originPrice, productImage } = card;
+        let discount = getRandomInt(100);
+        const salePrice = (originPrice - originPrice * discount / 100).toFixed(2);
         const cardElement = `
-    <div class="product-item" data-product-id="${id1}">
-                <div class="item_image"><a href="#" class="item_image"><img src="${productImage1}" alt=" alt="${productName1}"></a></div>
+    <div class="product-item" data-product-id="${id}">
+                <div class="item_image"><a href="#" class="item_image"><img src="${productImage}"  alt="${productName}"></a></div>
                 <div class="item-meta">
-                    <div class="item_discount">-${discount1}%</div>
+                    <div class="item_discount">-${discount}%</div>
                     <div class="item_price">
-                        <span class="item_sale-pice">\u{20AC}${salePrice1}</span>
-                        <span class="item_origin-pice">\u{20AC}${originPrice1}</span>
+                        <span class="item_sale-pice">\u{20AC}${salePrice}</span>
+                        <span class="item_origin-pice">\u{20AC}${originPrice}</span>
                     </div>
-                    <h3 class="item_title">${productName1}</h3>
+                    <h3 class="item_title">${productName}</h3>
                     <div class="item-reference">
                         <label class="label">Ref:</label>
                         <span class="sku">${sku}</span>
@@ -634,26 +634,34 @@ function createCards(data) {
             </div>
 `;
         cards.insertAdjacentHTML("beforeend", cardElement);
+        const createdCard = cards.lastElementChild;
+        createdCard.addEventListener("click", ()=>openModal(id, productImage, productName, originPrice, discount, salePrice));
     });
 }
 //modal
-modal.innerHTML = `
+function openModal(id, productImage, productName, originPrice, discount, salePrice) {
+    modal.classList.add("modal-inner--show");
+    modal.innerHTML = `
 <div class="modal-item" data-product-id="${id}">
-<div class="modal-image"><img src="${productImage}" alt="${productImage}"></div>
-<div class="modal-meta">
-    <h3 class="modal_title">${productName}</h3>
-    <div class="modal_price">
+    <div class="modal-image"><img src="${productImage}" alt="${productImage}"></div>
+    <div class="modal-meta">
+        <h3 class="modal_title">${productName}</h3>
+        <div class="modal_price">
         <span class="modal_origin-pice">\u{20AC}${originPrice}</span>
         <span class="modal-discount">${discount}%</span>
     </div>
     <span class="modal_sale-price">\u{20AC}${salePrice}</span>
     <div class="modal-buttons">
-        <button class="modal-addcart-buton">ADD TO CART</button>
-        <button class="modal-close-buton">CLOSE</button>
+        <button class="modal-addcart-button">ADD TO CART</button>
+        <button class="modal-close-button">CLOSE</button>
     </div>
 </div>
-</div>
 `;
+    const closeModal = document.querySelector(".modal-close-button");
+    closeModal.addEventListener("click", ()=>{
+        modal.classList.remove("modal-inner--show");
+    });
+}
 
 },{"../script/constants":"SFt14"}],"SFt14":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
