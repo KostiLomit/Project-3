@@ -260,8 +260,8 @@ body {
   max-width: 94rem;
   margin: 0 auto;
   display: grid;
-  position: absolute;
-  top: 540px;
+  position: relative;
+  top: -220px;
 }
 
 .product-list__inner .product-list__button {

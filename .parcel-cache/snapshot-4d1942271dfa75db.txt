@@ -2,6 +2,7 @@
 87D:\study\homework\FE59-onl\Project-3\node_modules\@parcel\core\test\BundleGraph.test.js133593202333187229 0
 85D:\study\homework\FE59-onl\Project-3\node_modules\csso\node_modules\mdn-data\index.js133593202219837036 0
 98D:\study\homework\FE59-onl\Project-3\node_modules\@swc\helpers\esm\_is_native_reflect_construct.js133593202339295488 0
+211D:\study\homework\FE59-onl\Project-3\dist\DALLÂ·E 2024-05-05 10.32.44 - 9 different logos, each vibrant and fairly simple and minimalistic, for a web page header, each on a flat color background (1).0456651e.png133606215958091060 0
 104D:\study\homework\FE59-onl\Project-3\node_modules\lmdb\node_modules\node-addon-api\napi-inl.deprecated.h133593202234285222 0
 66D:\study\homework\FE59-onl\Project-3\node_modules\is-json\index.js133593202222367311 0
 49D:\study\homework\FE59-onl\Project-3\package.json133593231161914118 0
@@ -24,7 +25,7 @@
 95D:\study\homework\FE59-onl\Project-3\node_modules\lmdb\node_modules\node-addon-api\node_api.gyp133593202178970012 0
 71D:\study\homework\FE59-onl\Project-3\node_modules\node-addon-api\napi.h133593202287871298 0
 63D:\study\homework\FE59-onl\Project-3\node_modules\source-map-js133593202305486976 1
-41D:\study\homework\FE59-onl\Project-3\dist133606147114521705 1
+41D:\study\homework\FE59-onl\Project-3\dist133606222485775141 1
 98D:\study\homework\FE59-onl\Project-3\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mtest.c133593202334766362 0
 88D:\study\homework\FE59-onl\Project-3\node_modules\@swc\helpers\_\_ts_values\package.json133593202344696483 0
 56D:\study\homework\FE59-onl\Project-3\node_modules\braces133593202232082157 1
@@ -208,7 +209,7 @@
 76D:\study\homework\FE59-onl\Project-3\node_modules\svgo\plugins\removeDesc.js133593202334526991 0
 102D:\study\homework\FE59-onl\Project-3\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mtest_enc.c133593202334507089 0
 88D:\study\homework\FE59-onl\Project-3\node_modules\@mischnic\json-sourcemap\dist\index.js133593202230077973 0
-69D:\study\homework\FE59-onl\Project-3\scss\sections\_product-list.scss133605840264567911 0
+69D:\study\homework\FE59-onl\Project-3\scss\sections\_product-list.scss133606222475766445 0
 111D:\study\homework\FE59-onl\Project-3\node_modules\@msgpackr-extract\msgpackr-extract-win32-x64\node.abi108.node133593202229330440 0
 81D:\study\homework\FE59-onl\Project-3\node_modules\posthtml-parser\dist\index.d.ts133593202259068944 0
 56D:\study\homework\FE59-onl\Project-3\node_modules\@lezer133593202154810627 1
@@ -946,7 +947,7 @@
 105D:\study\homework\FE59-onl\Project-3\node_modules\htmlnano\docs\versioned_docs\version-2.0.0\020-usage.md133593202334197883 0
 79D:\study\homework\FE59-onl\Project-3\node_modules\type-fest\source\entries.d.ts133593202287861428 0
 82D:\study\homework\FE59-onl\Project-3\node_modules\svgo\plugins\removeEmptyAttrs.js133593202334846140 0
-210D:\study\homework\FE59-onl\Project-3\dist\DALL·E 2024-05-05 10.32.44 - 9 different logos, each vibrant and fairly simple and minimalistic, for a web page header, each on a flat color background (1).0456651e.png133606014379098915 0
+210D:\study\homework\FE59-onl\Project-3\dist\DALL·E 2024-05-05 10.32.44 - 9 different logos, each vibrant and fairly simple and minimalistic, for a web page header, each on a flat color background (1).0456651e.png133606215958091060 0
 106D:\study\homework\FE59-onl\Project-3\node_modules\csso\node_modules\css-tree\lib\syntax\node\StyleSheet.js133593202342072703 0
 97D:\study\homework\FE59-onl\Project-3\node_modules\css-select\node_modules\domutils\lib\index.d.ts133593202333858687 0
 90D:\study\homework\FE59-onl\Project-3\node_modules\lmdb\dependencies\lmdb-data-v1\libraries133593202176957948 1
@@ -6033,14 +6034,13 @@
 63D:\study\homework\FE59-onl\Project-3\node_modules\.bin\svgo.cmd133593202354536304 0
 63D:\study\homework\FE59-onl\Project-3\node_modules\.bin\svgo.ps1133593202354536304 0
 81D:\study\homework\FE59-onl\Project-3\node_modules\.bin\update-browserslist-db.ps1133593202354536304 0
-211D:\study\homework\FE59-onl\Project-3\dist\DALLÂ·E 2024-05-05 10.32.44 - 9 different logos, each vibrant and fairly simple and minimalistic, for a web page header, each on a flat color background (1).0456651e.png133606015586353243 0
 56D:\study\homework\FE59-onl\Project-3\dist\1.bc4c9ad8.jpg133606015586393131 0
 62D:\study\homework\FE59-onl\Project-3\dist\favicon.0877f39b.jpg133606015586682452 0
-56D:\study\homework\FE59-onl\Project-3\dist\x.fdc71de3.svg133606015586891828 0
-52D:\study\homework\FE59-onl\Project-3\dist\index.html133606015586911741 0
 59D:\study\homework\FE59-onl\Project-3\dist\index.13b79b4b.js133606015586911741 0
 63D:\study\homework\FE59-onl\Project-3\dist\index.13b79b4b.js.map133606015586961624 0
 59D:\study\homework\FE59-onl\Project-3\dist\index.f18de3a7.js133606146134630980 0
 63D:\study\homework\FE59-onl\Project-3\dist\index.f18de3a7.js.map133606146134680823 0
-60D:\study\homework\FE59-onl\Project-3\dist\index.574c7455.css133606147114491700 0
-64D:\study\homework\FE59-onl\Project-3\dist\index.574c7455.css.map133606147114511668 0
+52D:\study\homework\FE59-onl\Project-3\dist\index.html133606015586911741 0
+56D:\study\homework\FE59-onl\Project-3\dist\x.fdc71de3.svg133606015586891828 0
+60D:\study\homework\FE59-onl\Project-3\dist\index.574c7455.css133606222485705310 0
+64D:\study\homework\FE59-onl\Project-3\dist\index.574c7455.css.map133606222485766155 0
