@@ -35,13 +35,13 @@
 .subheader__inner a {
     color: #002d58;
     &:hover  {
-        font-weight: 600;
+        text-decoration: underline;
     }
 }
 
 .dropdown__content {
     width: 250px;
-    z-index: 1;
+    z-index: 99;
 }
 
 .dropdown__content a {

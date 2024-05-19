@@ -584,6 +584,112 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"7SwCM":[function(require,module,exports) {
+var _constants = require("../script/constants");
+const cards = document.querySelector(".product-list__inner");
+const modal = document.querySelector(".modal-inner");
+let showCards = (0, _constants.SHOW_CARDS_CLICK);
+let productData = [];
+getProducts();
+async function getProducts() {
+    try {
+        if (!productData.length) {
+            const response = await fetch("https://66411982a7500fcf1a9f928c.mockapi.io/products/articles");
+            if (!response.ok) throw new Error(response.statusText);
+            const result = await response.json();
+            productData = result;
+        }
+        renderStartPage(productData);
+    } catch (err) {
+        console.log("error:", err);
+        alert("\u041D\u0435 \u0443\u0434\u0430\u043B\u043E\u0441\u044C \u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044C \u0442\u043E\u0432\u0430\u0440\u044B. \u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430 \u043F\u043E\u0437\u0436\u0435.");
+    }
+}
+function renderStartPage(data) {
+    const arrCards = data.slice(0, (0, _constants.SHOW_CARDS_CLICK));
+    createCards(arrCards);
+}
+function getRandomInt(discount1) {
+    return Math.floor(Math.random() * discount1);
+}
+function createCards(data) {
+    data.forEach((card)=>{
+        const { id: id1, sku, productName: productName1, originPrice: originPrice1, productImage: productImage1 } = card;
+        let discount1 = getRandomInt(100);
+        const salePrice1 = (originPrice1 - originPrice1 * discount1 / 100).toFixed(2);
+        const cardElement = `
+    <div class="product-item" data-product-id="${id1}">
+                <div class="item_image"><a href="#" class="item_image"><img src="${productImage1}" alt=" alt="${productName1}"></a></div>
+                <div class="item-meta">
+                    <div class="item_discount">-${discount1}%</div>
+                    <div class="item_price">
+                        <span class="item_sale-pice">\u{20AC}${salePrice1}</span>
+                        <span class="item_origin-pice">\u{20AC}${originPrice1}</span>
+                    </div>
+                    <h3 class="item_title">${productName1}</h3>
+                    <div class="item-reference">
+                        <label class="label">Ref:</label>
+                        <span class="sku">${sku}</span>
+                      </div>
+                </div>
+            </div>
+`;
+        cards.insertAdjacentHTML("beforeend", cardElement);
+    });
+}
+//modal
+modal.innerHTML = `
+<div class="modal-item" data-product-id="${id}">
+<div class="modal-image"><img src="${productImage}" alt="${productImage}"></div>
+<div class="modal-meta">
+    <h3 class="modal_title">${productName}</h3>
+    <div class="modal_price">
+        <span class="modal_origin-pice">\u{20AC}${originPrice}</span>
+        <span class="modal-discount">${discount}%</span>
+    </div>
+    <span class="modal_sale-price">\u{20AC}${salePrice}</span>
+    <div class="modal-buttons">
+        <button class="modal-addcart-buton">ADD TO CART</button>
+        <button class="modal-close-buton">CLOSE</button>
+    </div>
+</div>
+</div>
+`;
+
+},{"../script/constants":"SFt14"}],"SFt14":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "SHOW_CARDS_CLICK", ()=>SHOW_CARDS_CLICK);
+const SHOW_CARDS_CLICK = 12;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
 
 },{}]},["e73Eh","7SwCM"], "7SwCM", "parcelRequirea35a")
 

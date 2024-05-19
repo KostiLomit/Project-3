@@ -1,0 +1,1 @@
+export const SHOW_CARDS_CLICK = 12;
