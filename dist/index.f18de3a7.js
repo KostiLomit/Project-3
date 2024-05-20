@@ -662,6 +662,17 @@ function openModal(id, productImage, productName, originPrice, discount, salePri
         modal.classList.remove("modal-inner--show");
     });
 }
+//Search
+const searchInput = document.querySelector(".header__search--input");
+searchInput.addEventListener("input", ()=>{
+    const filter = searchInput.value.toLowerCase();
+    const products = document.querySelectorAll(".product-item");
+    products.forEach((product)=>{
+        const text = product.querySelector(".item_title").textContent.toLowerCase();
+        if (text.includes(filter)) product.style.display = "block";
+        else product.style.display = "none";
+    });
+});
 
 },{"../script/constants":"SFt14"}],"SFt14":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

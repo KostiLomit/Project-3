@@ -92,3 +92,22 @@ closeModal.addEventListener('click', () => {
 });
 
 }
+
+
+//Search
+
+const searchInput = document.querySelector('.header__search--input');
+
+searchInput.addEventListener('input', () => {
+    const filter = searchInput.value.toLowerCase();
+    const products = document.querySelectorAll('.product-item');
+
+    products.forEach(product => {
+        const text = product.querySelector('.item_title').textContent.toLowerCase();
+        if (text.includes(filter)) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+});
