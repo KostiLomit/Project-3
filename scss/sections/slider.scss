@@ -4,12 +4,14 @@
     width: 100%;
     margin: 0 auto;
     // overflow: hidden;
+    
 }
 
 .slider__img {
     display: flex;
     color: orange;
     transition: all ease 1s;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .slider__controls {

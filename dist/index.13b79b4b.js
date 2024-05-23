@@ -615,6 +615,9 @@ const prevImageGen = ()=>{
     activeImage = (activeImage - 1 + images.length) % images.length;
     updateSlide(activeImage);
 };
+// setInterval(() => {
+//     nextImageGen();
+// }, 3000);
 document.querySelector(".slider__controls-left").addEventListener("click", prevImageGen);
 document.querySelector(".slider__controls-right").addEventListener("click", nextImageGen);
 

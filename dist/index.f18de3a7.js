@@ -667,6 +667,10 @@ window.addEventListener("click", (e)=>{
     console.log(e.target);
     if (e.target === modal) closeModal();
 });
+window.addEventListener("keydown", (e)=>{
+    console.log(e.keyCode);
+    if (e.keyCode === 27) closeModal();
+});
 // const body = document.body;
 // function stopScroll() {
 //     body.classList.add('body-stopscroll');

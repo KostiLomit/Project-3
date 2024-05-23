@@ -26,6 +26,10 @@ import image3 from '../src/img/slider_img/3.jpeg';
         activeImage = (activeImage - 1 + images.length) % images.length;
         updateSlide(activeImage);
     }
+
+    // setInterval(() => {
+    //     nextImageGen();
+    // }, 3000);
     
     document.querySelector('.slider__controls-left').addEventListener('click', prevImageGen);
     document.querySelector('.slider__controls-right').addEventListener('click', nextImageGen);

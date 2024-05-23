@@ -245,7 +245,7 @@ body {
 
 .slider__img {
   color: orange;
-  transition: all 1s;
+  transition: opacity .5s ease-in-out;
   display: flex;
 }
 
