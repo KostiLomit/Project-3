@@ -77,7 +77,7 @@ modal.innerHTML =`
         <h3 class="modal_title">${productName}</h3>
         <div class="modal_price">
         <span class="modal_origin-pice">€${originPrice}</span>
-        <span class="modal-discount">${discount}%</span>
+        <span class="modal-discount">-${discount}%</span>
     </div>
     <span class="modal_sale-price">€${salePrice}</span>
     <div class="modal-buttons">
@@ -86,12 +86,27 @@ modal.innerHTML =`
     </div>
 </div>
 `;
-const closeModal = document.querySelector('.modal-close-button');
-closeModal.addEventListener('click', () => {
-    modal.classList.remove('modal-inner--show');
-});
+
+const btnClose = document.querySelector('.modal-close-button');
+btnClose.addEventListener('click', () => closeModal());
 
 }
+
+function closeModal() {
+    modal.classList.remove('modal-inner--show');
+}
+
+window.addEventListener('click', (e) => {
+    console.log(e.target);
+    if (e.target === modal) {
+        closeModal();
+    }
+});
+
+// const body = document.body;
+// function stopScroll() {
+//     body.classList.add('body-stopscroll');
+// }
 
 
 //Search
@@ -111,3 +126,4 @@ searchInput.addEventListener('input', () => {
         }
     });
 });
+

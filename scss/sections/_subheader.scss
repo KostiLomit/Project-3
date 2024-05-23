@@ -12,7 +12,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
     margin: 0 auto;
+    @media screen and (max-width: 900px) {
+        font-size: 16px;
+    }
 }
 
 .subheader__button {
@@ -30,6 +34,9 @@
         border: 1px solid #002d58;
         
     }
+    @media screen and (max-width: 900px) {
+        font-size: 18px;
+    }
 }
 
 .subheader__inner a {
@@ -40,6 +47,7 @@
 }
 
 .dropdown__content {
+    
     width: 250px;
     z-index: 99;
 }
@@ -75,3 +83,8 @@
     display: block;
 }
 
+.subheader_horizontal_menu {
+    @media (max-width: 1050px){
+        display: none;
+    }
+}

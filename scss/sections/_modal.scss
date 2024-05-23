@@ -10,6 +10,39 @@
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
     transition: width 2s;
+
+    .modal-meta  {
+        padding: 15px;
+    }
+    .modal_title {
+        color: #242424;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+        padding-bottom: 10px;
+    }
+    .modal_price {
+        color: #242424;
+
+        .modal_origin-pice {
+            text-decoration: line-through;
+            font-size: 14px;
+            line-height: 20px;
+            color: #868695;
+            margin-right: 8px;
+        }
+        .modal-discount {
+            font-size: 20px;
+            color: red;
+        }
+    }
+
+    .modal_sale-price {
+        font-size: 26px;
+        line-height: 32px;
+        font-weight: 700;
+        color: #a73afd;
+    }
 }
 
 .modal-inner--show {
@@ -22,7 +55,7 @@
     max-width: 600px;
     padding: 16px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
-    background-color: #1a191f;
+    background-color: #ffffff;
     color: white;
     display: flex;
     flex-direction: column;
@@ -36,4 +69,33 @@
 .stop-scrolling {
     height: 100%;
     overflow: hidden;
+}
+
+.modal-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    
+    .modal-addcart-button{
+        padding: 10px;
+        border-radius: 20px;
+        background: transparent;
+
+        &:hover {
+            color: green;
+            cursor: pointer;
+            border-color: green; 
+        }
+    }
+
+    .modal-close-button {
+        padding: 10px;
+        border-radius: 20px;
+        background: transparent;
+        &:hover {
+            cursor: pointer;
+            color: red;
+            border-color: red;            
+        }
+    }
 }

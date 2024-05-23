@@ -12,6 +12,7 @@
     row-gap: 40px;
     background: transparent;
 
+
     .product-list__button {
         padding: 15px;
         margin: 15px auto;
@@ -22,6 +23,16 @@
             border: 3px solid;
             cursor: pointer;
         }
+    }
+    @media (max-width: 1050px){
+        transition: 0.5s;
+        top: -120px;
+    }
+    @media (max-width: 795px){
+        column-gap: 10px;
+        row-gap: 10px;
+        transition: 0.5s;
+        top: -20px;
     }
 }
 
@@ -35,11 +46,14 @@
     padding: 15px;
     background: white;
     border-radius: 20px;
+    border-color: 5px, solid, black;
+    
     
 }
 .item-meta {
     display: flex;
     flex-direction: column;
+    
     
 
      .item_discount {
